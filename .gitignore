@@ -1,0 +1,16 @@
+# VS Code settings
+.vscode
+
+# Coverage directory used by tools like istanbul
+.nyc_output
+
+# Build output
+/dist
+
+# Node
+/node_modules
+/.node_modules_temp
+
+# NPM
+npm-pre-push-clean.sh
+.last-lock-clean
