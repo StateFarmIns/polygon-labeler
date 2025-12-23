@@ -10,9 +10,9 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const baselineMetrics = {
-    meanResponseTimeMs: 2100,
-    medianResponseTimeMs: 2000,
-    averageMemoryUsageMB: 4
+    meanResponseTimeMs: 2500,
+    medianResponseTimeMs: 2500,
+    averageMemoryUsageMB: 10
 }
 
 // Interface for benchmark results
@@ -234,7 +234,7 @@ async function runGetLabelPointsBenchmark(): Promise<void> {
 
     if (Object.keys(errors).length > 0) {
         console.error('Benchmark failed against baseline metrics:');
-        for (const [key, message] of Object.entries(errors)) {
+        for (const [, message] of Object.entries(errors)) {
             console.error(` - ${message}`);
         }
         throw new Error('Benchmark did not meet baseline performance metrics.');

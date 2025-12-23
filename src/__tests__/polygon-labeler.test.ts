@@ -442,7 +442,7 @@ describe("getLabelPoints", () => {
             type: "Polygon",
             coordinates: [[[5, 5], [5, 8], [8, 8], [8, 5], [5, 5]]],
           },
-          properties: null as any,
+          properties: {},
         },
       ],
     };
