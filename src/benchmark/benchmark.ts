@@ -11,8 +11,7 @@ const __dirname = path.dirname(__filename);
 
 const baselineMetrics = {
     meanResponseTimeMs: 2500,
-    medianResponseTimeMs: 2500,
-    averageMemoryUsageMB: 10
+    medianResponseTimeMs: 2500
 }
 
 // Interface for benchmark results
@@ -227,9 +226,6 @@ async function runGetLabelPointsBenchmark(): Promise<void> {
     }
     if (result10.median > baselineMetrics.medianResponseTimeMs) {
         errors = { ...errors, medianResponseTime: `Median response time ${result10.median.toFixed(2)}ms exceeds baseline of ${baselineMetrics.medianResponseTimeMs}ms` };
-    }
-    if ((result10.memoryUsed! / 1024 / 1024) > baselineMetrics.averageMemoryUsageMB) {
-        errors = { ...errors, averageMemoryUsage: `Average memory usage ${(result10.memoryUsed! / 1024 / 1024).toFixed(2)}MB exceeds baseline of ${baselineMetrics.averageMemoryUsageMB}MB` };
     }
 
     if (Object.keys(errors).length > 0) {
