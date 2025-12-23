@@ -56,7 +56,13 @@ jobs:
         with:
           node-version: '24'
           registry-url: 'https://registry.npmjs.org/'
-      # - name: Publish to npm
+      - name: Build project
+        run: |
+          npm ci
+          npm run build
+      - name: Audit Signature
+        run: npm audit signatures
+      # - name: Release to NPM
       #   env:
       #     NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       #   run: npm publish --access public --provenance

@@ -55,5 +55,8 @@
     "@turf/point-on-feature": "7.3.1",
     "geojson": "0.5.0",
     "polylabel": "2.0.1"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
