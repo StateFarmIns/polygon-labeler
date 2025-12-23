@@ -201,7 +201,7 @@ async function runGetLabelPointsBenchmark(): Promise<void> {
     }
 
     // Run benchmark with different iteration counts
-    console.log('\nRunning benchmarks with varying iteration counts...');
+    console.log('\nRunning benchmarks with iteration counts...');
 
     const result10 = await benchmarker.benchmarkWithStats(
         'getLabelPoints (10 iterations)',
