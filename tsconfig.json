@@ -42,5 +42,9 @@
     "moduleResolution": "NodeNext",
   },
   "include": ["src"],
-  "exclude": ["node_modules"]
+  "exclude": [
+    "node_modules",
+    "src/benchmark/**",
+    "src/__tests__/**"
+  ]
 }
