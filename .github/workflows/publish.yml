@@ -62,7 +62,5 @@ jobs:
           npm run build
       - name: Audit Signature
         run: npm audit signatures
-      # - name: Release to NPM
-      #   env:
-      #     NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-      #   run: npm publish --access public --provenance
+      - name: Release to NPM
+        run: npm publish --access public --provenance
