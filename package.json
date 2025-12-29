@@ -1,9 +1,15 @@
 {
   "name": "@statefarmins/polygon-labeler",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A package for generating a single ideal location to label polygons. This is useful for mapping libraries like Maplibre GL that will generate multiple labels for polygons by default. The package uses an algorithm to find the visual center of polygons and supports grouping features by properties, handling multi-polygons, and viewport clipping for optimal performance.",
-  "main": "index.js",
+  "main": "dist/polygon-labeler.js",
+  "types": "dist/polygon-labeler.d.ts",
   "type": "module",
+  "files": [
+    "dist/**/*",
+    "!dist/**/*.test.*",
+    "!dist/**/__tests__/**"
+  ],
   "scripts": {
     "build": "tsc",
     "test": "nyc mocha",

@@ -1,0 +1,7 @@
+src/
+tests/
+.nyc_output/
+coverage/
+*.test.ts
+tsconfig.json
+.eslintrc.*
