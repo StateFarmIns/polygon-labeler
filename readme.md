@@ -213,4 +213,4 @@ npm run benchmark
 
 ## Contributing
 
-Please read the [contributing](./CONTRIBUTING.md) document to make contributions.
+Please read the [contributing](https://github.com/StateFarmIns/.github/blob/master/CONTRIBUTING.md) document to make contributions.
